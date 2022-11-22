@@ -7,6 +7,8 @@ install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ruby --version
   - gem --version
+  - gem update --system
+  - gem --version
   - bundle install
 build: off
 test_script:
@@ -14,16 +16,3 @@ test_script:
 environment:
   matrix:
     - ruby_version: "200"
-    - ruby_version: "200-x64"
-    - ruby_version: "21"
-    - ruby_version: "21-x64"
-    - ruby_version: "22"
-    - ruby_version: "22-x64"
-    - ruby_version: "23"
-    - ruby_version: "23-x64"
-    - ruby_version: "24"
-    - ruby_version: "24-x64"
-    - ruby_version: "25"
-    - ruby_version: "25-x64"
-    - ruby_version: "26"
-    - ruby_version: "26-x64"
