@@ -8,7 +8,9 @@ install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - ruby --version
   - gem --version
-  - gem update --system
+  - appveyor DownloadFile https://rubygems.org/gems/rubygems-update-3.3.26.gem
+  - gem install --local rubygems-update-3.3.26.gem
+  #- gem update --system
   - gem --version
   - bundle install
 build: off
